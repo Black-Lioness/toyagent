@@ -2,13 +2,13 @@
 
 A simple Python command-line interface (CLI) script that acts as an agent interacting with OpenAI-compatible APIs. It can maintain a conversation, use various tools to interact with the file system, fetch web content, ask the user questions, and execute shell commands (with user approval). It can be configured to connect to different models and endpoints.
 
-This script provides a basic alternative to more complex CLI tools, focusing on core agentic functionality and extensibility through tools defined in `tools.py`.
+This script provides a basic alternative to more complex CLI tools, focusing on core agentic functionality and extensibility through tools defined in `pycodex_tools.py`.
 
 ## Features
 
 *   **Interactive Chat:** Engage in a back-and-forth conversation.
 *   **Single Prompt Execution:** Run the agent for a single, specific task.
-*   **Modular Tools (`tools.py`):**
+*   **Modular Tools (`pycodex_tools.py`):**
     *   `shell_exec`: Execute shell commands.
     *   `read_file`: Read file contents.
     *   `write_file`: Write content to files.
@@ -21,7 +21,7 @@ This script provides a basic alternative to more complex CLI tools, focusing on 
 
 ## Setup
 
-1.  **Clone or Download:** Get the `pycodex.py`, `tools.py`, and `requirements.txt` files and place them in the same directory.
+1.  **Clone or Download:** Get the `pycodex.py`, `pycodex_tools.py`, and `requirements.txt` files and place them in the same directory.
 2.  **Install Dependencies:** Create a virtual environment (recommended) and install the required packages:
     ```bash
     python -m venv .venv
@@ -57,6 +57,7 @@ Simply run the script without a prompt argument:
 
 ```bash
 python pycodex.py [options]
+```
 
 Type your messages and press Enter. The agent may use tools to fulfill your request, potentially asking for approval for certain actions. To exit, type `quit` or `exit`, or press `Ctrl+C`.
 
@@ -76,12 +77,12 @@ python pycodex.py "Read the first 5 lines of README.md and then list the files i
 **Options:**
 
 *   `--api-key YOUR_KEY`: Specify the API key directly.
-*   `--base-url YOUR_URL`: Specify a custom API endpoint (e.g., `http://localhost:8000/v1`).
-*   `--model MODEL_NAME`: Specify the model to use (default: `gpt-4o-mini`).
+*   `--base-url YOUR_URL`: Specify a custom API endpoint (e.g., `http://localhost:11434/v1`).
+*   `--model MODEL_NAME`: Specify the model to use (default: `llama3.1:8b`).
 
 Example with options:
 ```bash
-python pycodex.py --model gpt-4 --base-url http://localhost:1234/v1 "Fetch the content from https://example.com and summarize it."
+python pycodex.py --model llama3.1:8b --base-url http://localhost:11434/v1 "Fetch the content from https://example.com and summarize it."
 ```
 
 ## Security Warning
