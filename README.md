@@ -93,5 +93,3 @@ python pycodex.py --model llama3.1:8b --base-url http://localhost:11434/v1 "Fetc
 
 *   `pycodex.py`: The main script containing the agent loop, user interaction logic, and API call management.
 *   `pycodex_tools.py`: Contains the definitions (JSON schema) and Python implementation functions for all tools the agent can use. This file can be extended with new tools.
-*   `requirements.txt`: Lists the Python dependencies.
-```
