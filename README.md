@@ -19,6 +19,10 @@ This script provides a basic alternative to more complex CLI tools, focusing on 
 *   **User Approval:** Prompts the user before executing potentially dangerous tool actions (shell commands, file writing, directory creation, web fetching).
 *   **Configurable:** Set API Key, Base URL, and Model via environment variables or command-line arguments.
 
+## Security Warning
+
+⚠️ **Executing shell commands, writing files, creating directories, or fetching web pages via agent tools can be dangerous.** This script runs commands directly on your system *without* sandboxing. Review every action carefully before approving execution with 'y'. Do not approve actions unless you fully understand the potential consequences.
+
 ## Setup
 
 1.  **Clone or Download:** Get the `pycodex.py`, `pycodex_tools.py`, and `requirements.txt` files and place them in the same directory.
@@ -82,12 +86,8 @@ python pycodex.py "Read the first 5 lines of README.md and then list the files i
 
 Example with options:
 ```bash
-python pycodex.py --model llama3.1:8b --base-url http://localhost:11434/v1 "Fetch the content from https://example.com and summarize it."
+python pycodex.py --model llama3.1:8b --base-url http://localhost:11434/v1 --api-key ollama "Fetch the content from https://example.com and summarize it."
 ```
-
-## Security Warning
-
-⚠️ **Executing shell commands, writing files, creating directories, or fetching web pages via agent tools can be dangerous.** This script runs commands directly on your system *without* sandboxing. Review every action carefully before approving execution with 'y'. Do not approve actions unless you fully understand the potential consequences.
 
 ## Code Structure
 
