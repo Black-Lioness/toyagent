@@ -1,6 +1,6 @@
-# Python OpenAI Agent CLI
+# toyagent: Python OpenAI Agent CLI
 
-A simple Python command-line interface (CLI) script that acts as an agent interacting with OpenAI-compatible APIs. It can maintain a conversation, use various tools to interact with the file system, fetch web content, ask the user questions, and execute shell commands or Python code snippets (with careful user approval). It can be configured to connect to different models and endpoints.
+toyagent is a simple Python command-line interface (CLI) script that acts as an agent interacting with OpenAI-compatible APIs. It can maintain a conversation, use various tools to interact with the file system, fetch web content, ask the user questions, and execute shell commands or Python code snippets (with careful user approval). It can be configured to connect to different models and endpoints.
 
 This script provides a basic alternative to more complex CLI tools, focusing on core agentic functionality and extensibility through tools defined in `toyagent_tools.py`.
 
